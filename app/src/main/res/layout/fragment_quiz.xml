@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.presentetion.Fragment.QuizFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="#E5E5E5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="52dp"
+        tools:layout_editor_absoluteY="0dp">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="24dp"
+                android:src="@drawable/path"
+                android:layout_width="7dp"
+                android:layout_height="12.89dp"/>
+            <TextView
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:textColor="#1A051D"
+                android:text="Geography"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="120dp"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"/>
+
+        </LinearLayout>
+        <ProgressBar
+            android:layout_marginStart="100dp"
+            android:progressTint="#BE52F2"
+            android:progressBackgroundTint="@color/black"
+            android:id="@+id/ProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="29dp"
+            android:max="10"
+            android:progress="5" />
+        <LinearLayout
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="170dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/black"
+                android:id="@+id/text_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="10dp"
+                android:text=""
+                android:textSize="10sp"/>
+
+            <TextView
+                android:textColor="@color/black"
+                android:id="@+id/dit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="6dp"
+                android:text="/"
+                android:textSize="10dp" />
+
+            <TextView
+                android:textColor="@color/black"
+                android:id="@+id/text_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="6dp"
+                android:text=""
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginEnd="81dp"
+            android:textStyle="normal"
+            android:textColor="@color/black"
+            android:layout_marginTop="31dp"
+            android:layout_marginStart="81dp"
+            android:id="@+id/text_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp"
+             />
+
+
+
+
+    </LinearLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginBottom="150dp"
+            android:id="@+id/lin_yasno"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@id/Skip">
+            <ImageView
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="10dp"
+                android:id="@+id/yas"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:src="@drawable/default2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/no"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/default3"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginBottom="124dp"
+            app:layout_constraintBottom_toTopOf="@+id/Skip"
+            android:id="@+id/lin_four"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <com.google.android.material.button.MaterialButton
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/black"
+                app:cornerRadius="8dp"
+                android:backgroundTint="#6979F8"
+                android:id="@+id/Answer1"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:text=""
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:textColor="@color/black"
+                android:backgroundTint="#4CE2A7"
+                app:cornerRadius="8dp"
+                android:id="@+id/Answer2"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="6dp"
+                android:text=""
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Answer1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:textColor="@color/black"
+                app:cornerRadius="8dp"
+                android:backgroundTint="#FF4D4D"
+                android:id="@+id/Answer3"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="6dp"
+                android:text=""
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Answer2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:textColor="@color/black"
+                android:backgroundTint="@color/white"
+                app:cornerRadius="8dp"
+                android:id="@+id/Answer4"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="6dp"
+                android:text=""
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Answer3" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_marginBottom="77dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:backgroundTint="#FF6581"
+            app:cornerRadius="30dp"
+            android:textColor="@color/white"
+            android:id="@+id/Skip"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:text="Skip"
+            android:textSize="14dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

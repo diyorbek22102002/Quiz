@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <item
+
+      android:id="@+id/btMin"
+      android:icon="@drawable/explore___active"
+      android:title=""/>
+  <item
+    android:id="@+id/history"
+    android:icon="@drawable/map___inactive"
+    android:title=""/>
+  <item
+    android:id="@+id/setting"
+    android:icon="@drawable/profile___inactive"
+    android:title=""/>
+
+
+</menu>
