@@ -27,9 +27,10 @@
             android:layout_height="1dp"/>
 
         <TextView
+            android:id="@+id/shareThisApp"
             android:textColor="#333333"
             android:textSize="18sp"
-            android:text="SF Pro Display"
+            android:text="ShareThisApp"
             android:layout_marginTop="32dp"
             android:layout_marginStart="23dp"
             android:layout_width="wrap_content"
@@ -41,6 +42,60 @@
             android:background="#EEEEEE"
             android:layout_width="wrap_content"
             android:layout_height="1dp"/>
+
+
+        <TextView
+            android:id="@+id/reteUs"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            android:text="Rete us"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="23dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <View
+            android:layout_marginTop="50dp"
+            android:background="#EEEEEE"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"/>
+
+
+        <TextView
+            android:id="@+id/leaveFeedBeck"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            android:text="Leave feedBeck"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="23dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <View
+            android:layout_marginTop="50dp"
+            android:background="#EEEEEE"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"/>
+        <TextView
+            android:id="@+id/ClearHistory"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            android:text="Clear history"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="23dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <View
+            android:layout_marginTop="50dp"
+            android:background="#EEEEEE"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"/>
+
+
     </LinearLayout>
 
 </FrameLayout>

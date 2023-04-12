@@ -5,6 +5,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import com.example.quizapp.data.model.User_SQLite
+import retrofit2.http.DELETE
 
 @Dao
 interface MembersDao {
@@ -18,4 +19,5 @@ interface MembersDao {
 
     @Delete
     fun delete(User_SQLite: User_SQLite)
+
 }

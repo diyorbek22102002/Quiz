@@ -43,11 +43,15 @@ class HistoryFragment : Fragment() {
 
       // adapter ---------------------------------------------------------------------------------------------------
         val recyclerView: RecyclerView = view.findViewById(R.id.rv_history)
-       thread {
-           val db = DBSingle.getInstance(requireContext()).membersDao()
+         CoroutineScope(Dispatchers.IO).launch {
 
-           recyclerView.adapter = RVHistoryAdapter(db.getAll())
-       }
+             val db = DBSingle.getInstance(requireContext()).membersDao()
+             recyclerView.adapter = RVHistoryAdapter(db.getAll())
+         }
+
+
+
+
       // spinner -----------------------------------------------------------------------------------------------------
 //        val options = arrayOf("film","music","mathematics")
 //        spinner.adapter = ArrayAdapter<String>(requireContext(),android.R.layout.simple_list_item_activated_1,options)

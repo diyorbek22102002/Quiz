@@ -19,5 +19,10 @@ class SettingsFragment : Fragment() {
         return binding.root
     }
 
+    val deleteHistory = binding.ClearHistory
+    val shareThisApp = binding.shareThisApp
+    val leaveFeedBeck = binding.leaveFeedBeck
+    val reteUs = binding.reteUs
+
 
 }

@@ -12,6 +12,9 @@ import com.example.quizapp.data.model.User_SQLite
 import com.example.quizapp.databinding.FragmentResultBinding
 import com.example.quizapp.db.room.DBSingle
 import com.example.quizapp.screen.MAIN
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import org.koin.android.ext.android.inject
 import kotlin.concurrent.thread
 
@@ -49,16 +52,21 @@ class ResultFragment : Fragment() {
 
         val db = DBSingle.getInstance(requireContext()).membersDao()
 
-        thread {
+        CoroutineScope(Dispatchers.IO).launch {
             db.insertAll(User_SQLite(0,resultQuiz.category.toString(),resultQuiz.difficulty,resultQuiz.countTrueAnswers,resultQuiz.amount))
         }
-        thread {
+
+
+        CoroutineScope(Dispatchers.IO).launch {
             Log.e("Room", db.getAll().toString())
         }
 
         finish.setOnClickListener {
                 MAIN.navController.navigate(R.id.action_resultFragment_to_mainFragment)
             MAIN.binding.bottomNavView.visibility = View.VISIBLE
+
+
+
 
 
         }
